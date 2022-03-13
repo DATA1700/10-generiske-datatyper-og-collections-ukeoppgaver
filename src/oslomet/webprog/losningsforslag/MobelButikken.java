@@ -64,37 +64,37 @@ public class MobelButikken {
         // (tester ArrayList og Vector)
         List<Mobel> mobelliste = new ArrayList<>();
         long startTid = System.nanoTime();
-        for(int i=0; i<10000000; ++i) {
+        for(int i=0; i<100000000; ++i) {
             mobelliste.add(new MobelImpl("Espen", "Bord", 30, 2000, 4));
         }
         long sluttTid = System.nanoTime();
         long varighet = (sluttTid-startTid)/1000000;
-        System.out.println("Innsetting av ti millioner objekter med ArrayList tok " + varighet + " ms");
+        System.out.println("Innsetting av hundre millioner objekter med ArrayList tok " + varighet + " ms");
 
         Vector<Mobel> mobelvektor = new Vector<>();
         startTid = System.nanoTime();
-        for(int i=0; i<10000000; ++i) {
+        for(int i=0; i<100000000; ++i) {
             mobelvektor.add(new MobelImpl("Espen", "Bord", 30, 2000, 4));
         }
         sluttTid = System.nanoTime();
         varighet = (sluttTid-startTid)/1000000;
-        System.out.println("Innsetting av ti millioner objekter med Vector tok " + varighet + " ms");
+        System.out.println("Innsetting av hundre millioner objekter med Vector tok " + varighet + " ms");
 
         startTid = System.nanoTime();
-        for(int i=0; i<10000000; ++i) {
+        for(int i=0; i<100000000; ++i) {
             mobelliste.get(i);
         }
         sluttTid = System.nanoTime();
         varighet = (sluttTid-startTid)/1000000;
-        System.out.println("Traversering av ti millioner objekter med ArrayList tok " + varighet + " ms");
+        System.out.println("Traversering av hundre millioner objekter med ArrayList tok " + varighet + " ms");
 
         startTid = System.nanoTime();
-        for(int i=0; i<10000000; ++i) {
+        for(int i=0; i<100000000; ++i) {
             mobelvektor.get(i);
         }
         sluttTid = System.nanoTime();
         varighet = (sluttTid-startTid)/1000000;
-        System.out.println("Traversering av ti millioner objekter med Vector tok " + varighet + " ms");
+        System.out.println("Traversering av hundre millioner objekter med Vector tok " + varighet + " ms");
     }
 
     // oppgave 5

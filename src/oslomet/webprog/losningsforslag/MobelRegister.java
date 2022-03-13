@@ -48,6 +48,7 @@ public class MobelRegister <T extends Mobel> {
     }
 
     public void sorterBordMedComparator() {
-        Collections.sort(mobler, new BordComparator());
+        BordComparator bordComparator = new BordComparator();
+        Collections.sort(mobler, bordComparator);
     }
 }

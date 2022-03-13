@@ -1,7 +1,7 @@
 package oslomet.webprog.losningsforslag;
 
 // oppgave 2
-abstract class Mobel implements Comparable {
+abstract class Mobel implements Comparable<Mobel> {
     private String navn;
     private String type;
     private int vekt;
@@ -59,8 +59,7 @@ abstract class Mobel implements Comparable {
     public abstract String toString();
 
     // oppgave 3
-    public int compareTo(Object o) {
-        Mobel m = (Mobel) o;
+    public int compareTo(Mobel m) {
         return this.getNummer() - m.getNummer();
     }
 }
