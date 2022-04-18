@@ -20,12 +20,13 @@ public class MobelRegister <T extends Mobel> {
 
     public T getMobel(int nummer) {
         for(T mobel : mobler) {
-            if(mobel.getNummer() == nummer)
+            if(mobel.getNummer() == nummer)d
                 return mobel;
         }
         return null;
     }
 
+    // FIXME! Fjerner element i listen underveis i itereringen. Dette fører til problemer.
     public void slettMobel(int nummer) {
         for(T mobel : mobler) {
             if(mobel.getNummer() == nummer)
